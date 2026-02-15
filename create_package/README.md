@@ -109,3 +109,4 @@ python create_package.py --name my_package \
 4. 作成したフォルダ内にcreate_package.pyをいれる。
 5. 再度コマンドパレット開いて、"Run Task"→"Create Python Package"を選択して、パッケージ名とかを入力する。
 6. フォルダの階層構造とか諸々が作成されてるはず。
+7. create_package.pyは不要なので削除してok
