@@ -59,22 +59,20 @@ python create_package.py --name my_package \
 ```
 
 ## もっと便利な使い方!!!!
-概要：VSCodeのtasks.jsonを使う。
-つかう前の準備：
- - (1)create_package.pyを下記のフォルダにいれとく。
- - "C:\\Users\\k_kawano1\\Desktop\\Python_env\\Template\\create_package\\create_package.py"
- - (2)Ctrl + Shift + Pでコマンドパレット開いて、"タスク：ユーザータスクを開く(Tasks:Open User Tasks)"を押下
- - (3)Tasks.jsonを下記のように編集
+概要：VSCodeのtasks.jsonを使う。  
+つかう前の準備：  
+1. Ctrl + Shift + Pでコマンドパレット開いて、"タスク：ユーザータスクを開く(Tasks:Open User Tasks)"を押下
+2. Tasks.jsonを下記のように編集(もしかしたらユーザー設定同期してたらいじらなくてもこうなってるかも)
 ```
 {
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Create Python package (global)",
+            "label": "Create Python Package (global)",
             "type": "shell",
             "command": "python",
             "args": [
-                "C:\\Users\\k_kawano1\\Desktop\\Python_env\\Template\\create_package\\create_package.py",
+                "${workspaceFolder}/create_package.py",
                 "--name",
                 "${input:pkgName}",
                 "--deps",
@@ -107,5 +105,7 @@ python create_package.py --name my_package \
     ]
 }
 ```
- - (4)再度コマンドパレット開いて、"Run Task"→"Create Python Package"を選択して、パッケージ名とかを入力する。
- - (5)フォルダの階層構造とか諸々が作成されてるはず。
+3. 任意のフォルダにPJのフォルダを作成して開く({workspaceFolderってこと)。
+4. 作成したフォルダ内にcreate_package.pyをいれる。
+5. 再度コマンドパレット開いて、"Run Task"→"Create Python Package"を選択して、パッケージ名とかを入力する。
+6. フォルダの階層構造とか諸々が作成されてるはず。
