@@ -60,7 +60,7 @@ python create_package.py --name my_package \
 
 ## もっと便利な使い方!!!!
 概要：VSCodeのtasks.jsonを使う。
-- つかう前の準備：
+つかう前の準備：
  - (1)create_package.pyを下記のフォルダにいれとく。
  - "C:\\Users\\k_kawano1\\Desktop\\Python_env\\Template\\create_package\\create_package.py"
  - (2)Ctrl + Shift + Pでコマンドパレット開いて、"タスク：ユーザータスクを開く(Tasks:Open User Tasks)"を押下
