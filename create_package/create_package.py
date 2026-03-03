@@ -36,6 +36,8 @@ if __name__ == "__main__":
 
 GITIGNORE_TEMPLATE = """venv/
 __pycache__/
+tests/
+build/
 *.pyc
 .env
 log/
