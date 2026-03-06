@@ -38,9 +38,10 @@ GITIGNORE_TEMPLATE = """venv/
 __pycache__/
 tests/
 build/
+dist/
+log/
 *.pyc
 .env
-log/
 """
 
 ENV_TEMPLATE = "# Environment variables go here\n"
@@ -66,7 +67,6 @@ def create_structure(package_name: str, deps: str, author_name: str, author_emai
     src_dir = root / "src" / package_name
     tests_dir = root / "tests"
     config_dir = src_dir / "config"
-    venv_dir = root / "venv"
 
     # 追加ディレクトリ（tests と同階層＝root 直下）
     assets_dir = root / "assets"
@@ -79,7 +79,6 @@ def create_structure(package_name: str, deps: str, author_name: str, author_emai
         src_dir / "utils",
         tests_dir,
         config_dir,
-        venv_dir,
         assets_dir,  # root/assets
         build_dir,   # root/build
         log_dir      # root/log
