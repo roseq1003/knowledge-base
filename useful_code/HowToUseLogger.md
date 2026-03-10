@@ -1,4 +1,5 @@
 # ロガーの使い方
+```
 # main.py
 from mini_logger import get_logger
 
@@ -8,3 +9,4 @@ try:
     1 / 0
 except Exception:
     logger.exception("何か例外が発生しました")
+```
